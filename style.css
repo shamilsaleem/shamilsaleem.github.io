@@ -1,30 +1,116 @@
-body{
+body {
     background-color: #f2f2f2;
 }
 .card {
     position: absolute;
     top: 20%;
     width: 80%;
-    height: 200px;
+    height: max-content;
     border-radius: 30px;
     background: #e0e0e0;
     box-shadow: 15px 15px 30px #bebebe,
                -15px -15px 30px #ffffff;
   }
-.container{
+.container-1 {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.round-image{
+.round-image {
     top: 5%;
     position: absolute;
     z-index: 10;
 }
-#image{
+#image {
     height: 200px;
     border-radius: 100%;
     box-shadow: 15px 15px 30px #555555,
                -15px -15px 30px #ffffff;
 }
+body{
+    background: #FBD4C5;
+  }
+  
+  .container{
+    width: 100%;
+    margin-left: 10px;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 100px;
+    top: 10%;
+    align-items: center;
+    justify-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .container h1:nth-child(1) {
+    color: #355c7d;
+    font-family: 'Fira Code', monospace;
+    font-weight: 800;
+    font-size: 20px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 170px;
+    animation: type 2s steps(40,end) forwards, blink .5s step-end infinite alternate;
+    margin-bottom: 0px;
+  }
+  
+  .container h1:nth-child(2) {
+    opacity: 0;
+    font-family: "Work Sans", sans-serif;
+    margin: 0 auto auto auto;
+    background: linear-gradient(to right, #f8b195, #f67280, #c06c84);
+    font-weight: 800;
+    font-size: 50px;  
+    width: 430px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    overflow: hidden;
+    animation: shring-animation 2.2s steps(40,end) 2s forwards, blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    margin-top: 0px;
+  }
+  
+  @keyframes shring-animation {
+    0% {
+      background-position: 0 0;
+      opacity: 0;
+      width: 0;
+    }
+    1% {
+      background-position: 0 0;
+      opacity: 1;
+      border-right: 2px solid orange;
+    }
+    50% {
+      background-position: 150px 0;
+      opacity: 1;
+      border-right: 2px solid orange;
+    }
+    100% {
+      background-position: 400px 0;
+      opacity: 1;
+      border-right: 0px;
+    }
+  }
+  
+  @keyframes type {
+    0% {
+      width: 0;
+    }
+    1%, 99%{
+      border-right: 2px solid orange;
+    }
+    100%{
+      border-right: none;
+    }
+  }
+  
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
