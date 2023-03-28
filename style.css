@@ -5,6 +5,7 @@
     position: absolute;
     top: 115px;
     width: 80%;
+    max-width: 1092px;
     height: max-content;
     border-radius: 30px;
     background: #e0e0e0;
@@ -34,7 +35,6 @@
   
   .container{
     width: 100%;
-    margin-left: 10px;
     margin-right: auto;
     text-align: center;
     margin-top: 100px;
