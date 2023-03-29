@@ -61,7 +61,7 @@
   .container h1:nth-child(2) {
     opacity: 0;
     font-family: "Work Sans", sans-serif;
-    margin: 0 auto auto auto;
+    margin: 0 0 0 0;
     background: linear-gradient(to right, #f8b195, #f67280, #c06c84);
     font-weight: 800;
     font-size: 50px;  
@@ -167,5 +167,23 @@
     border-radius: 30px;
     background: lightgrey;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+  }
+  @media only screen and (max-width: 520px){
+    .container h1:nth-child(2){
+      font-size: 40px;
+    }
+  }
+  @media only screen and (max-width: 470px){
+    .container h1:nth-child(2){
+      font-size: 35px;
+      font-family: "Work Sans", sans-serif;
+      margin: 0 0 0 0;
+    }
+    .quote{
+      font-size: 25px;
+    }
+    #gpt{
+      font-size: 20px;
+    }
   }
   
