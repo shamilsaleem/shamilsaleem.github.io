@@ -1,54 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="emojies/3.gif">
-    <title>S H A M I L S A L E E M</title>
-</head>
-<body>
-
-    <div class="container-1">
-        <div class="round-image">
-            <img src="images/image_s.jpeg" id="image">
-        </div>
-        <div class="card">
-            <div class = "container">
-                <h1>Hi, It's me</h1>
-                <h1>SHAMIL SALEEM</h1>
-            </div>
-            <div class="container-2">
-                <div class="quote-container">
-                    <div class="card-2">
-                        <p class="quote">Sup?</p>
-                        <p id="gpt">Sometimes I just code. That's all.</p>
-                    </div>
-                </div>   
-            </div>
-            <div class="emoji-row">
-                <img src="emojies/1.gif" alt="" class="emojies">
-                <img src="emojies/2.gif" alt="" class="emojies">
-                <img src="emojies/3.gif" alt="" class="emojies">
-                <img src="emojies/4.gif" alt="" class="emojies">
-                <img src="emojies/5.gif" alt="" class="emojies">
-                <img src="emojies/6.gif" alt="" class="emojies">
-                <img src="emojies/7.gif" alt="" class="emojies">
-                <img src="emojies/8.gif" alt="" class="emojies">
-                <img src="emojies/9.gif" alt="" class="emojies">
-                <img src="emojies/10.gif" alt="" class="emojies">
-            </div>
-        </div>
-        <div class="social">
-            <a href="https://www.instagram.com/shamil.saleem/"><img src="social-icons/instagram.png" alt="" class="social-icons"></a>
-            <a href="https://m.facebook.com/100016938551812/"><img src="social-icons/facebook.png" alt="" class="social-icons"></a>
-            <a href="https://www.youtube.com/@shamilsaleem9499"><img src="social-icons/youtube.png" alt="" class="social-icons"></a>
-            <a href="https://github.com/shamilsaleem"><img src="social-icons/github.png" alt="" class="social-icons"></a>
-            <a href="https://telegram.dog/vokedaa"><img src="social-icons/telegram.png" alt="" class="social-icons"></a>
-            <a href="mailto:shamilshalu500@gmail.com"><img src="social-icons/mail.png" alt="" class="social-icons"></a>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shamil Saleem</title>
+  </head>
+  <body>
+    <div>
+      <h1>Shamil Saleem</h1>
+      <p>Sometimes I just code.</p>
+      <hr />
     </div>
-    
-</body>
+    <div>
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML, CSS, JavaScript</li>
+        <li>NodeJs, ReactJs</li>
+        <li>MongoDB</li>
+        <li>C, C++</li>
+        <li>Python</li>
+        <li>Linux</li>
+        <li>LibreOffice</li>
+      </ul>
+      <hr />
+    </div>
+
+    <div onload="loadProjects()">
+      <h2>Projects</h2>
+      <ul id="projects"></ul>
+      <hr />
+    </div>
+    <script>
+      var projects = [
+        {
+          name: "React ToDo App",
+          url: "https://github.com/shamilsaleem/todo-react",
+        },
+        {
+          name: "Node Shopping Cart",
+          url: "https://github.com/shamilsaleem/node-shopping-cart",
+        },
+        {
+          name: "C++ CLI Calculator",
+          url: "https://github.com/shamilsaleem/cpp-calculator",
+        },
+        {
+          name: "SJC Client",
+          url: "https://github.com/shamilsaleem/sjc-client",
+        },
+      ];
+      for (i in projects) {
+        document.getElementById("projects").innerHTML +=
+          "<li><a href='" +
+          projects[i].url +
+          "'>" +
+          projects[i].name +
+          "</a></li>";
+      }
+    </script>
+
+    <div class="social">
+      <h2>Contact me</h2>
+      <a href="https://www.instagram.com/shamil.saleem/">Instagram</a>
+      <a href="https://m.facebook.com/100016938551812/">Facebook</a>
+      <a href="https://www.youtube.com/@shamilsaleem9499">YouTube</a>
+      <a href="https://github.com/shamilsaleem">Github</a>
+      <a href="https://telegram.dog/vokedaa">Telegram</a>
+      <a href="mailto:shamilshalu500@gmail.com">E-Mail</a>
+    </div>
+  </body>
 </html>
